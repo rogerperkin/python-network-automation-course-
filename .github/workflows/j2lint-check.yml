@@ -18,4 +18,4 @@ jobs:
       - name: Run j2lint
         uses: ansible-actions/j2lint-action@v0.0.1
         with:
-          target: "./templates"
+          target: "./templates/*.j2"
