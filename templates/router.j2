@@ -1,1 +1,13 @@
 
+hostname {{ hostname }}
+
+interface {{ interface_name }}
+ ip address {{ ip_address }} {{ subnet_mask }}
+ no shutdown
+
+router ospf {{ ospf_process_id }}
+ network {{ ospf_network }} {{ wildcard_mask }} area {{ ospf_area }}
+
+line vty 0 4
+ password {{ vty_password }}
+ login
