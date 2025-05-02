@@ -1,7 +1,10 @@
 ---
 name: Jinja2 Linting check
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'templates/**/*.j2' # Trigger only when .j2 files in the templates directory are updated.
 
 jobs:
   build:
